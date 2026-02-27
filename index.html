@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gabinet psychoterapeutyczny - profesjonalna pomoc psychologiczna">
+    <title>Gabinet Psychoterapeutyczny | Imię Nazwisko</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Nawigacja -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">Gabinet Psychoterapii</a>
+            <button class="nav-toggle" aria-label="Menu">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#o-mnie">O mnie</a></li>
+                <li><a href="#oferta">Oferta</a></li>
+                <li><a href="#gabinet">Gabinet</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>Profesjonalna pomoc psychoterapeutyczna</h1>
+                <p>Wsparcie w trudnych momentach życia</p>
+                <a href="#kontakt" class="btn">Umów wizytę</a>
+            </div>
+        </section>
+
+        <!-- O mnie -->
+        <section id="o-mnie" class="section">
+            <div class="container">
+                <h2 class="section-title">O mnie</h2>
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img src="images/photo.jpg" alt="Zdjęcie psychoterapeuty">
+                    </div>
+                    <div class="about-text">
+                        <h3>Imię Nazwisko</h3>
+                        <p class="subtitle">Psychoterapeuta / Psycholog</p>
+                        <p>
+                            Jestem certyfikowanym psychoterapeutą z wieloletnim doświadczeniem.
+                            Specjalizuję się w terapii poznawczo-behawioralnej.
+                        </p>
+                        <ul class="credentials">
+                            <li>Certyfikat psychoterapeuty XYZ</li>
+                            <li>Członek Polskiego Towarzystwa Psychoterapeutycznego</li>
+                            <li>10+ lat doświadczenia</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Oferta -->
+        <section id="oferta" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Oferta</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🧠</div>
+                        <h3>Psychoterapia indywidualna</h3>
+                        <p>Sesje terapeutyczne dostosowane do Twoich potrzeb.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">👥</div>
+                        <h3>Terapia par</h3>
+                        <p>Pomoc w rozwiązywaniu konfliktów i poprawie komunikacji.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">💬</div>
+                        <h3>Konsultacje online</h3>
+                        <p>Sesje przez wideorozmowę dla Twojej wygody.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gabinet -->
+        <section id="gabinet" class="section">
+            <div class="container">
+                <h2 class="section-title">Gabinet</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>📍 Adres</h3>
+                        <p>ul. Przykładowa 123<br>00-000 Warszawa</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🕐 Godziny przyjęć</h3>
+                        <p>Pon - Pt: 9:00 - 19:00<br>Sob: 10:00 - 14:00</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>💰 Cennik</h3>
+                        <p>Sesja 50 min: 200 zł<br>Pierwsza konsultacja: 150 zł</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontakt z mapą -->
+        <section id="kontakt" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Kontakt</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Skontaktuj się</h3>
+                        <p><strong>Telefon:</strong> +48 123 456 789</p>
+                        <p><strong>Email:</strong> kontakt@gabinet.pl</p>
+
+                        <div class="social-links">
+                            <a href="https://facebook.com/twoj-profil" target="_blank" rel="noopener" class="social-btn facebook">
+                                Facebook
+                            </a>
+                            <a href="https://mojpsycholog.pl/twoj-profil" target="_blank" rel="noopener" class="social-btn mojpsycholog">
+                                Mój Psycholog
+                            </a>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.123456789!2d21.0122!3d52.2297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTLCsDEzJzQ2LjkiTiAyMcKwMDAnNDQuMCJF!5e0!3m2!1spl!2spl!4v1234567890"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Gabinet Psychoterapeutyczny. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <script>// Hamburger menu toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });</script>
+</body>
+</html>
