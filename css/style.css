@@ -242,8 +242,26 @@ img {
     padding-top: 70px;
 }
 
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+    .hero-logo {
+        max-width: 500px;
+        width: 85%;
+        height: auto;
+        margin: 0 auto 30px auto;
+        mix-blend-mode: multiply;
+        opacity: 0.95;
+        display: block;
+    }
+
     .hero h1 {
-        font-size: clamp(2rem, 6vw, 3.5rem);
+        font-size: clamp(1.8rem, 5vw, 3rem);
         margin-bottom: 20px;
         color: var(--primary-dark);
         text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
@@ -253,6 +271,7 @@ img {
         font-size: clamp(1rem, 3vw, 1.3rem);
         margin-bottom: 20px;
         color: var(--text);
+        text-shadow: 0 0 10px rgba(255,255,255,0.8), 0 0 20px rgba(255,255,255,0.6);
     }
 
     .hero p:last-of-type {
@@ -770,6 +789,19 @@ img {
             transform: translateY(0);
         }
 
+    .hero-logo {
+        max-width: 380px;
+        width: 75%;
+        margin: 0 auto 25px auto;
+    }
+
+    .hero p {
+        text-shadow: 0 0 15px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,0.9);
+        background: rgba(255,255,255,0.3);
+        padding: 8px 15px;
+        border-radius: 8px;
+    }
+
     .about-grid {
         grid-template-columns: 1fr;
         text-align: center;
@@ -821,6 +853,25 @@ img {
 
     .hero {
         min-height: 80vh;
+    }
+
+    .hero-logo {
+        max-width: 300px;
+        width: 80%;
+        margin: 0 auto 20px auto;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+        background: rgba(255,255,255,0.5);
+        padding: 10px 15px;
+        border-radius: 8px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     .service-card,
