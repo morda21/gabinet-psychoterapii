@@ -281,6 +281,7 @@ img {
     .hero .btn {
         background: var(--primary);
         color: white;
+        margin-bottom: 60px;
     }
 
         .hero .btn:hover {
@@ -694,40 +695,61 @@ img {
     box-shadow: 0 8px 25px rgba(0,0,0,0.2);
 }
 
-.social-icon.facebook {
-    background: #1877f2;
+.social-icon.google {
+    background: #4285f4;
 }
 
-.social-icon.facebook:hover {
-    background: #0d65d9;
+.social-icon.google:hover {
+    background: #3367d6;
 }
 
-.social-icon.instagram {
-    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+/* External Links (TwójPsycholog) */
+.external-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
 }
 
-.social-icon.instagram:hover {
-    background: linear-gradient(45deg, #e6683c, #dc2743, #cc2366, #bc1888, #f09433);
-}
-
-.social-icon.mojpsycholog {
+.external-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
     background: var(--primary);
+    color: #ffffff !important;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
 }
 
-.social-icon.mojpsycholog:hover {
+.external-link span,
+.external-link i {
+    color: #ffffff !important;
+}
+
+.external-link:hover {
     background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
-/* Responsywno�� dla ikon */
+.external-link i {
+    font-size: 1.1rem;
+}
+
+/* Responsywność dla linków zewnętrznych */
 @media (max-width: 480px) {
-    .social-icons {
-        justify-content: center;
+    .external-links {
+        align-items: stretch;
     }
     
-    .social-icon {
-        width: 45px;
-        height: 45px;
-        font-size: 1.2rem;
+    .external-link {
+        justify-content: center;
+        padding: 14px 20px;
     }
 }
 
@@ -1096,6 +1118,25 @@ img {
 .faq-answer p {
     color: var(--text-light);
     line-height: 1.7;
+}
+
+.faq-help-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.faq-help-list li {
+    color: var(--text-light);
+    padding: 8px 15px;
+    background: rgba(74, 103, 65, 0.1);
+    border-radius: 20px;
+    font-size: 0.95rem;
+    text-align: center;
+    border: 1px solid rgba(74, 103, 65, 0.2);
 }
 
 /* ============================================
