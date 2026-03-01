@@ -249,7 +249,7 @@
                 <!-- Formularz kontaktowy -->
                 <div class="contact-form-container">
                     <h3>Napisz do mnie</h3>
-                    <form id="contact-form" class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+                    <form id="contact-form" class="contact-form" action="send.php" method="POST">
                         <div class="form-group">
                             <label for="email">E-mail</label>
                             <input type="email" id="email" name="email" required placeholder="twoj@email.pl">
@@ -258,9 +258,14 @@
                             <label for="message">Wiadomość</label>
                             <textarea id="message" name="message" rows="5" required placeholder="W czym mogę pomóc?"></textarea>
                         </div>
+                        <!-- Honeypot - pole antyspamowe (ukryte) -->
+                        <div style="position: absolute; left: -9999px;" aria-hidden="true">
+                            <input type="text" name="website" tabindex="-1" autocomplete="off">
+                        </div>
                         <button type="submit" class="btn btn-submit">
                             <i class="fas fa-paper-plane"></i> Wyślij wiadomość
                         </button>
+                        <div id="form-message" class="form-message" style="display: none;"></div>
                     </form>
                 </div>
                 
@@ -496,19 +501,49 @@
             });
         });
 
-        // Formularz kontaktowy - obsługa wysyłki
+        // Formularz kontaktowy - obsługa wysyłki AJAX
         const contactForm = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
+        
         if (contactForm) {
             contactForm.addEventListener('submit', function(e) {
                 e.preventDefault();
                 
-                // Tu można dodać rzeczywistą logikę wysyłania formularza
-                // np. przez fetch do backendu lub formspree
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalBtnText = submitBtn.innerHTML;
+                
+                // Zablokuj przycisk i pokaż loader
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Wysyłanie...';
+                formMessage.style.display = 'none';
+                
                 const formData = new FormData(this);
                 
-                // Pokazujemy komunikat sukcesu
-                alert('Dziękuję za wiadomość! Odpowiem najszybciej jak to możliwe.');
-                this.reset();
+                fetch('send.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    formMessage.style.display = 'block';
+                    if (data.success) {
+                        formMessage.className = 'form-message success';
+                        formMessage.innerHTML = '<i class="fas fa-check-circle"></i> ' + data.message;
+                        contactForm.reset();
+                    } else {
+                        formMessage.className = 'form-message error';
+                        formMessage.innerHTML = '<i class="fas fa-exclamation-circle"></i> ' + data.message;
+                    }
+                })
+                .catch(error => {
+                    formMessage.style.display = 'block';
+                    formMessage.className = 'form-message error';
+                    formMessage.innerHTML = '<i class="fas fa-exclamation-circle"></i> Wystąpił błąd. Proszę spróbować ponownie lub skontaktować się telefonicznie.';
+                })
+                .finally(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnText;
+                });
             });
         }
 

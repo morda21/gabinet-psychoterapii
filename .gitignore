@@ -1,0 +1,10 @@
+# Plik konfiguracyjny z hasłem (NIE commitować!)
+config.php
+
+# IDE
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
