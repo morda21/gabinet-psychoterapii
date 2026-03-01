@@ -67,6 +67,7 @@ img {
 
 .section-green .service-card {
     background: rgba(255, 255, 255, 0.15);
+    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
 }
 
@@ -80,6 +81,7 @@ img {
 
 .section-green .help-areas {
     background: rgba(255, 255, 255, 0.15);
+    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
 }
 
@@ -143,10 +145,19 @@ img {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 1.3rem;
     font-weight: 700;
     color: var(--primary);
     text-decoration: none;
+}
+
+.logo-img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
 }
 
 .nav-menu {
@@ -484,6 +495,7 @@ img {
     cursor: pointer;
     padding: 20px;
     transition: var(--transition);
+    -webkit-user-select: none;
     user-select: none;
 }
 
@@ -711,6 +723,27 @@ img {
 }
 
 /* ============================================
+   RESPONSIVE - TABLET (992px)
+   ============================================ */
+@media (max-width: 992px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pricing-card.featured {
+        transform: none;
+        order: -1;
+    }
+
+    .pricing-card.featured:hover {
+        transform: translateY(-5px);
+    }
+}
+
+/* ============================================
    RESPONSIVE - TABLET (768px)
    ============================================ */
 @media (max-width: 768px) {
@@ -811,6 +844,308 @@ img {
         width: 100%;
         text-align: center;
     }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-card.featured {
+        transform: none;
+    }
+
+    .faq-question span {
+        font-size: 1rem;
+    }
+
+    .contact-form-container {
+        margin-top: 30px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* ============================================
+   PRICING SECTION
+   ============================================ */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.pricing-card {
+    background: white;
+    border-radius: var(--radius);
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    position: relative;
+    transition: var(--transition);
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.pricing-card.featured {
+    transform: scale(1.05);
+    border: 2px solid var(--primary);
+    z-index: 1;
+}
+
+.pricing-card.featured:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+.pricing-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+    color: white;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.pricing-header h3 {
+    color: var(--primary);
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.pricing-duration {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.pricing-price {
+    margin: 25px 0;
+}
+
+.pricing-price .price {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+.pricing-price .currency {
+    font-size: 1.5rem;
+    color: var(--text-light);
+}
+
+.pricing-features {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.pricing-features li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    color: var(--text-light);
+}
+
+.pricing-features li:last-child {
+    border-bottom: none;
+}
+
+.pricing-features i {
+    color: var(--primary);
+    margin-right: 10px;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.pricing-note {
+    text-align: center;
+    margin-top: 30px;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.pricing-note i {
+    color: var(--primary);
+    margin-right: 5px;
+}
+
+/* ============================================
+   FAQ SECTION
+   ============================================ */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: white;
+    border-radius: var(--radius);
+    margin-bottom: 15px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 20px 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: inherit;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text);
+    text-align: left;
+    transition: var(--transition);
+}
+
+.faq-question:hover {
+    color: var(--primary);
+}
+
+.faq-question i {
+    transition: transform 0.3s ease;
+    color: var(--primary);
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding: 0 25px 20px;
+}
+
+.faq-answer p {
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+/* ============================================
+   CONTACT FORM
+   ============================================ */
+.contact-form-container {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #ddd;
+}
+
+.contact-form-container h3 {
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--text);
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: var(--radius);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(74, 103, 65, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #aaa;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-checkbox {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.form-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+    cursor: pointer;
+    accent-color: var(--primary);
+}
+
+.form-checkbox label {
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.form-checkbox label a {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.btn-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 30px;
+    font-size: 1rem;
+}
+
+.btn-submit i {
+    font-size: 0.9rem;
 }
 
 /* ============================================

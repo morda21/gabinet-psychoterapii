@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Gabinet Moment - psychoterapia indywidualna osób dorosłych, konsultacje rodzicielskie. Gdańsk, ul. Łódzka 64/43">
     <title>Gabinet Moment | Psychoterapia Gdańsk</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
+    <link rel="apple-touch-icon" href="./images/favicon.png">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/cookie.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,13 +19,18 @@
     <!-- Nawigacja -->
     <header class="header">
         <nav class="nav container">
-            <a href="#" class="logo">Gabinet Moment</a>
+            <a href="#" class="logo">
+                <img src="./images/favicon.png" alt="Logo Gabinet Moment" class="logo-img">
+                <span>Gabinet Moment</span>
+            </a>
             <button class="nav-toggle" aria-label="Menu">
                 <span class="hamburger"></span>
             </button>
             <ul class="nav-menu">
                 <li><a href="#o-mnie">O mnie</a></li>
                 <li><a href="#oferta">Oferta</a></li>
+                <li><a href="#cennik">Cennik</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#gabinet">Gabinet</a></li>
                 <li><a href="#kontakt">Kontakt</a></li>
             </ul>
@@ -113,6 +121,129 @@
             </div>
         </section>
 
+        <!-- Cennik -->
+        <section id="cennik" class="section">
+            <div class="container">
+                <h2 class="section-title">Cennik</h2>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Konsultacja psychologiczna</h3>
+                            <div class="pricing-duration">50 minut</div>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="price">180</span>
+                            <span class="currency">zł</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Wstępna rozmowa diagnostyczna</li>
+                            <li><i class="fas fa-check"></i> Omówienie trudności i potrzeb</li>
+                            <li><i class="fas fa-check"></i> Ustalenie planu dalszej pracy</li>
+                        </ul>
+                        <a href="#kontakt" class="btn btn-outline">Umów się</a>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge">Najpopularniejsze</div>
+                        <div class="pricing-header">
+                            <h3>Psychoterapia</h3>
+                            <div class="pricing-duration">50 minut</div>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="price">180</span>
+                            <span class="currency">zł</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Regularne sesje terapeutyczne</li>
+                            <li><i class="fas fa-check"></i> Praca nad zmianą i rozwojem</li>
+                            <li><i class="fas fa-check"></i> Bezpieczna przestrzeń do refleksji</li>
+                            <li><i class="fas fa-check"></i> Indywidualne podejście</li>
+                        </ul>
+                        <a href="#kontakt" class="btn">Umów się</a>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Konsultacje rodzicielskie</h3>
+                            <div class="pricing-duration">50 minut</div>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="price">180</span>
+                            <span class="currency">zł</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Wsparcie w wychowaniu</li>
+                            <li><i class="fas fa-check"></i> Omówienie trudności z dzieckiem</li>
+                            <li><i class="fas fa-check"></i> Strategie reagowania</li>
+                        </ul>
+                        <a href="#kontakt" class="btn btn-outline">Umów się</a>
+                    </div>
+                </div>
+                <p class="pricing-note"><i class="fas fa-info-circle"></i> Płatność gotówką lub przelewem. Istnieje możliwość uzyskania faktury.</p>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Najczęściej zadawane pytania</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Jak wygląda proces terapii?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Proces terapii rozpoczyna się od 2-3 konsultacji wstępnych, podczas których poznajemy się, omawiam Twoje trudności i wspólnie ustalamy cele terapii. Następnie spotykamy się regularnie (zazwyczaj raz w tygodniu) na sesjach trwających 50 minut. Długość całego procesu zależy od indywidualnych potrzeb – może to być kilka miesięcy lub dłużej. Ważne jest, że to Ty decydujesz o zakończeniu terapii.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Jak często odbywają się sesje?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Standardowo sesje odbywają się raz w tygodniu, o stałej porze. Regularność spotkań jest ważna dla efektywności terapii, ponieważ pozwala budować ciągłość procesu i bezpieczną relację terapeutyczną. W szczególnych sytuacjach częstotliwość może być dostosowana do Twoich potrzeb.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Czy mogę odwołać wizytę?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Tak, wizytę można odwołać najpóźniej 24 godziny przed planowanym terminem. W przypadku późniejszego odwołania lub niestawienia się na sesji, pobierana jest pełna opłata za wizytę. To zasada, która pozwala mi efektywnie planować czas i być dostępną dla wszystkich pacjentów.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Czym różni się konsultacja od psychoterapii?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Konsultacja to pojedyncze spotkanie lub seria 2-3 spotkań, których celem jest rozpoznanie problemu i określenie formy pomocy. Psychoterapia to dłuższy, regularny proces pracy nad sobą, który pozwala na głębsze zrozumienie swoich trudności i wprowadzenie trwałych zmian w życiu.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Czy terapia jest poufna?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Tak, wszystko co omawiamy podczas sesji objęte jest tajemnicą zawodową. Nie przekazuję żadnych informacji osobom trzecim bez Twojej wyraźnej zgody. Wyjątkiem są sytuacje określone prawem, np. bezpośrednie zagrożenie życia lub zdrowia.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Jak przygotować się do pierwszej wizyty?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Nie musisz się specjalnie przygotowywać. Przyjdź takim/-ą, jakim/-ą jesteś. Podczas pierwszego spotkania porozmawiamy o tym, co Cię do mnie sprowadza i jakie są Twoje oczekiwania. Możesz przygotować sobie pytania, jeśli jakieś masz, ale to nie jest konieczne.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Gabinet -->
         <section id="gabinet" class="section">
             <div class="container">
@@ -175,12 +306,44 @@
                                 <i class="fab fa-instagram"></i>
                             </a>
                         </div>
+                        
+                        <!-- Formularz kontaktowy -->
+                        <div class="contact-form-container">
+                            <h3>Napisz do mnie</h3>
+                            <form id="contact-form" class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+                                <div class="form-group">
+                                    <label for="name">Imię i nazwisko</label>
+                                    <input type="text" id="name" name="name" required placeholder="Twoje imię">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="email">E-mail</label>
+                                        <input type="email" id="email" name="email" required placeholder="twoj@email.pl">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Telefon</label>
+                                        <input type="tel" id="phone" name="phone" placeholder="+48 000 000 000">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Wiadomość</label>
+                                    <textarea id="message" name="message" rows="5" required placeholder="W czym mogę pomóc?"></textarea>
+                                </div>
+                                <div class="form-group form-checkbox">
+                                    <input type="checkbox" id="privacy" name="privacy" required>
+                                    <label for="privacy">Akceptuję <a href="#" onclick="alert('Polityka prywatności'); return false;">politykę prywatności</a> i wyrażam zgodę na przetwarzanie moich danych osobowych.</label>
+                                </div>
+                                <button type="submit" class="btn btn-submit">
+                                    <i class="fas fa-paper-plane"></i> Wyślij wiadomość
+                                </button>
+                            </form>
+                        </div>
                     </div>
                     <div class="map-container">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2326.8706713521115!2d18.600248377127098!3d54.32391770113175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd73f848491423%3A0x7b4911649de58ef7!2zxYHDs2R6a2EgNjQsIDgwLTE4MCBHZGHFhHNr!5e0!3m2!1spl!2spl!4v1772378178596!5m2!1spl!2spl"
+                                title="Mapa lokalizacji Gabinetu Moment"
                                 allowfullscreen=""
-                                loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade">
+                                loading="lazy">
                         </iframe>
                     </div>
                 </div>
@@ -315,6 +478,40 @@
         document.getElementById('lightbox').addEventListener('click', (e) => {
             if (e.target.id === 'lightbox') closeLightbox();
         });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Zamknij wszystkie inne
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Toggle bieżący
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // Formularz kontaktowy - obsługa wysyłki
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Tu można dodać rzeczywistą logikę wysyłania formularza
+                // np. przez fetch do backendu lub formspree
+                const formData = new FormData(this);
+                
+                // Pokazujemy komunikat sukcesu
+                alert('Dziękuję za wiadomość! Odpowiem najszybciej jak to możliwe.');
+                this.reset();
+            });
+        }
     </script>
 </body>
 </html>
