@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gabinet psychoterapeutyczny - profesjonalna pomoc psychologiczna">
-    <title>Gabinet Psychoterapeutyczny | Imię Nazwisko</title>
+    <meta name="description" content="Gabinet Moment - psychoterapia indywidualna osób dorosłych, konsultacje rodzicielskie. Gdańsk, ul. Łódzka 64/43">
+    <title>Gabinet Moment | Psychoterapia Gdańsk</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cookie.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome dla ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <!-- Nawigacja -->
     <header class="header">
         <nav class="nav container">
-            <a href="#" class="logo">Gabinet Psychoterapii</a>
+            <a href="#" class="logo">Gabinet Moment</a>
             <button class="nav-toggle" aria-label="Menu">
                 <span class="hamburger"></span>
             </button>
@@ -30,9 +33,11 @@
         <!-- Hero Section -->
         <section class="hero">
             <div class="container hero-content">
-                <h1>Profesjonalna pomoc psychoterapeutyczna</h1>
-                <p>Wsparcie w trudnych momentach życia</p>
-                <a href="#kontakt" class="btn">Umów wizytę</a>
+                <h1>Gabinet Psychoterapeutyczny</h1>
+                <p><strong>Spotkanie zaczyna się tam, gdzie kończy się presja.</strong></p>
+                <p>To, co splątane, nie musi od razu stać się jasne.<br>
+                Czasem potrzebuje najpierw zostać zobaczone, nazwane i przyjęte.</p>
+                <a href="#kontakt" class="btn">Kontakt</a>
             </div>
         </section>
 
@@ -42,45 +47,68 @@
                 <h2 class="section-title">O mnie</h2>
                 <div class="about-grid">
                     <div class="about-image">
-                        <img src="images/photo.jpg" alt="Zdjęcie psychoterapeuty">
+                        <img src="images/ja.webp" alt="Psychoterapeutka - Gabinet Moment">
                     </div>
                     <div class="about-text">
-                        <h3>Imię Nazwisko</h3>
-                        <p class="subtitle">Psychoterapeuta / Psycholog</p>
                         <p>
-                            Jestem certyfikowanym psychoterapeutą z wieloletnim doświadczeniem.
-                            Specjalizuję się w terapii poznawczo-behawioralnej.
+                            Jestem psychologiem i psychoterapeutką w trakcie Całościowego Kursu Psychoterapii Integracyjnej z Psychodramą, z ponad 12-letnim doświadczeniem w pracy z osobami w kryzysie, w tym ponad 5 lat doświadczenia psychologicznego i psychoterapeutycznego. Prowadzę własną praktykę psychoterapeutyczną, a wcześniej pracowałam w klinice zdrowia psychicznego oraz w instytucjach wsparcia społecznego.
                         </p>
-                        <ul class="credentials">
-                            <li>Certyfikat psychoterapeuty XYZ</li>
-                            <li>Członek Polskiego Towarzystwa Psychoterapeutycznego</li>
-                            <li>10+ lat doświadczenia</li>
-                        </ul>
+                        <p>
+                            Trzon mojej pracy opiera się na psychoterapii psychodynamicznej, która pozwala lepiej zrozumieć swoje wzorce, schematy i nieświadome mechanizmy, kształtujące emocje, relacje i codzienne funkcjonowanie, oraz odkrywać w nich możliwości zmiany i rozwoju osobistego. Jednocześnie jestem otwarta na podejście humanistyczne oraz wybrane techniki terapii poznawczo-behawioralnej (CBT), dostosowane do potrzeb pacjenta.
+                        </p>
+                        <p>
+                            W swojej praktyce pracuję także z osobami neuroatypowymi oraz prowadzę warsztaty grupowe i Trening Umiejętności Społecznych (TUS), wspierając rozwój kompetencji interpersonalnych i społecznych uczestników.
+                        </p>
+                        <p>
+                            W psychoterapii najważniejsze jest dla mnie głębokie rozumienie pacjenta, które przynosi ulgę i pozwala na rozwój oraz wprowadzanie zmian. Prowadzę psychoterapię dorosłych oraz konsultacje rodzicielskie. U podstaw mojej pracy leży dialog między pacjentem a psychoterapeutą, który wymaga aktywnego uczestnictwa obu stron i tworzy przestrzeń do wglądu, zmiany i budowania nowych sposobów funkcjonowania.
+                        </p>
+                        <p>
+                            Swoją pracę poddaję regularnej superwizji indywidualnej oraz grupowej, przynależę do Polskiego Towarzystwa Psychiatrycznego i Sekcji Naukowej Psychoterapii, stale się dokształcam i prowadzę pracę z zachowaniem szczególnej uwagi na etykę zawodu psychoterapeuty, aby zapewnić pacjentom wsparcie oparte na najwyższych standardach zawodowych.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Oferta -->
-        <section id="oferta" class="section section-alt">
+        <section id="oferta" class="section section-green">
             <div class="container">
                 <h2 class="section-title">Oferta</h2>
                 <div class="services-grid">
                     <div class="service-card">
-                        <div class="service-icon">🧠</div>
-                        <h3>Psychoterapia indywidualna</h3>
-                        <p>Sesje terapeutyczne dostosowane do Twoich potrzeb.</p>
+                        <div class="service-icon">
+                            <img src="images/oferta/WelcomeBoard.webp" alt="Konsultacja psychologiczna">
+                        </div>
+                        <h3>Konsultacja psychologiczna</h3>
+                        <p>Konsultacja psychologiczna to pierwsze spotkania, podczas których omawiane są trudności, z którymi zgłasza się osoba, oraz jej aktualna sytuacja życiowa. Celem jest wstępne rozpoznanie problemu i określenie, jaka forma wsparcia będzie najbardziej odpowiednia. Zazwyczaj przed rozpoczęciem psychoterapii odbywają się trzy konsultacje, które pozwalają lepiej zrozumieć potrzeby i wspólnie ustalić dalszy plan pracy.</p>
                     </div>
                     <div class="service-card">
-                        <div class="service-icon">👥</div>
-                        <h3>Terapia par</h3>
-                        <p>Pomoc w rozwiązywaniu konfliktów i poprawie komunikacji.</p>
+                        <div class="service-icon">
+                            <img src="images/oferta/a-road-with-mountains-in-the-background.webp" alt="Psychoterapia">
+                        </div>
+                        <h3>Psychoterapia</h3>
+                        <p>Psychoterapia to regularny proces spotkań z psychoterapeutą, którego celem jest głębsze zrozumienie swoich trudności, emocji i schematów działania. Umożliwia pracę nad zmianą sposobu myślenia, przeżywania i reagowania, tak aby poprawić jakość życia i relacji. Jest bezpieczną przestrzenią do rozmowy, refleksji i stopniowego wprowadzania trwałych zmian.</p>
                     </div>
                     <div class="service-card">
-                        <div class="service-icon">💬</div>
-                        <h3>Konsultacje online</h3>
-                        <p>Sesje przez wideorozmowę dla Twojej wygody.</p>
+                        <div class="service-icon">
+                            <img src="images/oferta/painting-of-handprints.webp" alt="Konsultacje rodzicielskie">
+                        </div>
+                        <h3>Konsultacje rodzicielskie</h3>
+                        <p>Konsultacje rodzicielskie to spotkania skierowane do rodziców, którzy chcą lepiej zrozumieć potrzeby swojego dziecka oraz trudności wychowawcze. Podczas rozmowy omawiane są konkretne sytuacje i sposoby reagowania, z uwzględnieniem wieku oraz etapu rozwoju dziecka. Celem jest wzmocnienie kompetencji rodzicielskich i znalezienie rozwiązań wspierających zarówno dziecko, jak i całą rodzinę.</p>
                     </div>
+                </div>
+                
+                <div class="help-areas">
+                    <h3>Pomoc w obszarach:</h3>
+                    <ul class="help-list">
+                        <li>kryzysy</li>
+                        <li>lęk</li>
+                        <li>depresja</li>
+                        <li>relacje</li>
+                        <li>stres</li>
+                        <li>neuroróżnorodność</li>
+                        <li>zaburzenia osobowości</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -88,23 +116,42 @@
         <!-- Gabinet -->
         <section id="gabinet" class="section">
             <div class="container">
-                <h2 class="section-title">Gabinet</h2>
-                <div class="info-grid">
-                    <div class="info-card">
-                        <h3>📍 Adres</h3>
-                        <p>ul. Przykładowa 123<br>00-000 Warszawa</p>
+                <h2 class="section-title">Zobacz atmosferę Gabinetu Moment</h2>
+                <p class="section-subtitle">Gabinet znajduje się w południowej części Gdańska, niedaleko pętli Świętokrzyskiej. Wokół dostępne są bezpłatne miejsca parkingowe.</p>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item" onclick="openLightbox(0)">
+                        <img src="images/gabinet/1.jpeg" alt="Gabinet Moment - zdjęcie 1">
                     </div>
-                    <div class="info-card">
-                        <h3>🕐 Godziny przyjęć</h3>
-                        <p>Pon - Pt: 9:00 - 19:00<br>Sob: 10:00 - 14:00</p>
+                    <div class="gallery-item" onclick="openLightbox(1)">
+                        <img src="images/gabinet/2.jpeg" alt="Gabinet Moment - zdjęcie 2">
                     </div>
-                    <div class="info-card">
-                        <h3>💰 Cennik</h3>
-                        <p>Sesja 50 min: 200 zł<br>Pierwsza konsultacja: 150 zł</p>
+                    <div class="gallery-item" onclick="openLightbox(2)">
+                        <img src="images/gabinet/3.jpeg" alt="Gabinet Moment - zdjęcie 3">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(3)">
+                        <img src="images/gabinet/4.jpeg" alt="Gabinet Moment - zdjęcie 4">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(4)">
+                        <img src="images/gabinet/5.jpeg" alt="Gabinet Moment - zdjęcie 5">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(5)">
+                        <img src="images/gabinet/6.jpeg" alt="Gabinet Moment - zdjęcie 6">
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <span class="lightbox-prev" onclick="changeSlide(-1)">&#10094;</span>
+            <div class="lightbox-content">
+                <img id="lightbox-img" src="" alt="Zdjęcie galerii">
+                <div class="lightbox-counter"><span id="lightbox-current">1</span> / <span id="lightbox-total">6</span></div>
+            </div>
+            <span class="lightbox-next" onclick="changeSlide(1)">&#10095;</span>
+        </div>
 
         <!-- Kontakt z mapą -->
         <section id="kontakt" class="section section-alt">
@@ -112,21 +159,25 @@
                 <h2 class="section-title">Kontakt</h2>
                 <div class="contact-grid">
                     <div class="contact-info">
-                        <h3>Skontaktuj się</h3>
-                        <p><strong>Telefon:</strong> +48 123 456 789</p>
-                        <p><strong>Email:</strong> kontakt@gabinet.pl</p>
+                        <h3>Gabinet Moment</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Gdańsk, ul. Łódzka 64/43</p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:+48505673871">+48 505 673 871</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:anmordawska@gmail.com">anmordawska@gmail.com</a></p>
 
-                        <div class="social-links">
-                            <a href="https://facebook.com/twoj-profil" target="_blank" rel="noopener" class="social-btn facebook">
-                                Facebook
+                        <!-- Ikony społecznościowe -->
+                        <div class="social-icons">
+                            <a href="https://facebook.com/twoj-profil" target="_blank" rel="noopener" 
+                               class="social-icon facebook" title="Facebook">
+                                <i class="fab fa-facebook-f"></i>
                             </a>
-                            <a href="https://mojpsycholog.pl/twoj-profil" target="_blank" rel="noopener" class="social-btn mojpsycholog">
-                                Mój Psycholog
+                            <a href="https://instagram.com/twoj-profil" target="_blank" rel="noopener" 
+                               class="social-icon instagram" title="Instagram">
+                                <i class="fab fa-instagram"></i>
                             </a>
                         </div>
                     </div>
                     <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.123456789!2d21.0122!3d52.2297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTLCsDEzJzQ2LjkiTiAyMcKwMDAnNDQuMCJF!5e0!3m2!1spl!2spl!4v1234567890"
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2326.8706713521115!2d18.600248377127098!3d54.32391770113175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd73f848491423%3A0x7b4911649de58ef7!2zxYHDs2R6a2EgNjQsIDgwLTE4MCBHZGHFhHNr!5e0!3m2!1spl!2spl!4v1772378178596!5m2!1spl!2spl"
                                 allowfullscreen=""
                                 loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade">
@@ -140,11 +191,27 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Gabinet Psychoterapeutyczny. Wszelkie prawa zastrzeżone.</p>
+            <p>&copy; 2026 Gabinet Moment. Wszelkie prawa zastrzeżone.</p>
         </div>
     </footer>
 
-    <script>// Hamburger menu toggle
+    <!-- Cookie Popup -->
+    <div id="cookie-popup" class="cookie-popup">
+        <div class="cookie-content">
+            <div class="cookie-icon">🍪</div>
+            <div class="cookie-text">
+                <h4>Ta strona używa plików cookies</h4>
+                <p>Używamy plików cookies, aby zapewnić najlepsze wrażenia z korzystania ze strony. 
+                   Kontynuując przeglądanie, zgadzasz się na ich użycie.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button id="cookie-accept" class="cookie-btn accept">Akceptuję</button>
+                <button id="cookie-decline" class="cookie-btn decline">Odrzuć</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
         const navToggle = document.querySelector('.nav-toggle');
         const navMenu = document.querySelector('.nav-menu');
 
@@ -153,7 +220,6 @@
             navToggle.classList.toggle('active');
         });
 
-        // Close menu on link click
         document.querySelectorAll('.nav-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
@@ -161,7 +227,6 @@
             });
         });
 
-        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -170,6 +235,86 @@
                     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
-        });</script>
+        });
+
+        // Cookie Popup
+        const cookiePopup = document.getElementById('cookie-popup');
+        const acceptBtn = document.getElementById('cookie-accept');
+        const declineBtn = document.getElementById('cookie-decline');
+
+        // Sprawdź czy użytkownik już podjął decyzję
+        if (!localStorage.getItem('cookieConsent')) {
+            setTimeout(() => {
+                cookiePopup.classList.add('show');
+            }, 1000);
+        }
+
+        acceptBtn.addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'accepted');
+            cookiePopup.classList.remove('show');
+        });
+
+        declineBtn.addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'declined');
+            cookiePopup.classList.remove('show');
+        });
+
+        // Lightbox Gallery
+        const galleryImages = [
+            'images/gabinet/1.jpeg',
+            'images/gabinet/2.jpeg',
+            'images/gabinet/3.jpeg',
+            'images/gabinet/4.jpeg',
+            'images/gabinet/5.jpeg',
+            'images/gabinet/6.jpeg'
+        ];
+        let currentImageIndex = 0;
+
+        function openLightbox(index) {
+            currentImageIndex = index;
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const currentSpan = document.getElementById('lightbox-current');
+            
+            lightboxImg.src = galleryImages[index];
+            currentSpan.textContent = index + 1;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function changeSlide(direction) {
+            currentImageIndex += direction;
+            if (currentImageIndex >= galleryImages.length) {
+                currentImageIndex = 0;
+            } else if (currentImageIndex < 0) {
+                currentImageIndex = galleryImages.length - 1;
+            }
+            
+            const lightboxImg = document.getElementById('lightbox-img');
+            const currentSpan = document.getElementById('lightbox-current');
+            lightboxImg.src = galleryImages[currentImageIndex];
+            currentSpan.textContent = currentImageIndex + 1;
+        }
+
+        // Zamknij lightbox klawiszem Escape i strzałkami
+        document.addEventListener('keydown', (e) => {
+            const lightbox = document.getElementById('lightbox');
+            if (lightbox.classList.contains('active')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowRight') changeSlide(1);
+                if (e.key === 'ArrowLeft') changeSlide(-1);
+            }
+        });
+
+        // Zamknij lightbox klikając poza zdjęciem
+        document.getElementById('lightbox').addEventListener('click', (e) => {
+            if (e.target.id === 'lightbox') closeLightbox();
+        });
+    </script>
 </body>
 </html>

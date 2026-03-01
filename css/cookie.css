@@ -1,0 +1,116 @@
+/* ============================================
+   COOKIE POPUP
+   ============================================ */
+.cookie-popup {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.cookie-popup.show {
+    transform: translateY(0);
+}
+
+.cookie-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cookie-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.cookie-text {
+    flex: 1;
+    min-width: 250px;
+}
+
+.cookie-text h4 {
+    color: var(--primary);
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.cookie-text p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.cookie-btn {
+    padding: 10px 24px;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: inherit;
+}
+
+.cookie-btn.accept {
+    background: var(--primary);
+    color: white;
+}
+
+.cookie-btn.accept:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.cookie-btn.decline {
+    background: transparent;
+    color: var(--text-light);
+    border: 2px solid #ddd;
+}
+
+.cookie-btn.decline:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+/* Cookie popup - responsive */
+@media (max-width: 768px) {
+    .cookie-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 20px;
+    }
+
+    .cookie-icon {
+        font-size: 2rem;
+    }
+
+    .cookie-text {
+        min-width: auto;
+    }
+
+    .cookie-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cookie-btn {
+        flex: 1;
+        max-width: 150px;
+    }
+}
