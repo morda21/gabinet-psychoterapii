@@ -143,59 +143,18 @@
         <section id="cennik" class="section">
             <div class="container">
                 <h2 class="section-title">Cennik</h2>
-                <div class="pricing-grid">
-                    <div class="pricing-card">
-                        <div class="pricing-header">
-                            <h3>Konsultacja psychologiczna</h3>
-                            <div class="pricing-duration">50 minut</div>
-                        </div>
-                        <div class="pricing-price">
+                <div class="pricing-simple">
+                    <div class="pricing-main">
+                        <div class="pricing-price-big">
                             <span class="price">200</span>
                             <span class="currency">zł</span>
                         </div>
-                        <ul class="pricing-features">
-                            <li><i class="fas fa-check"></i> Wstępna rozmowa diagnostyczna</li>
-                            <li><i class="fas fa-check"></i> Omówienie trudności i potrzeb</li>
-                            <li><i class="fas fa-check"></i> Ustalenie planu dalszej pracy</li>
-                        </ul>
-                        <a href="#kontakt" class="btn btn-outline">Umów się</a>
-                    </div>
-                    <div class="pricing-card featured">
-                        <div class="pricing-badge">Najpopularniejsze</div>
-                        <div class="pricing-header">
-                            <h3>Psychoterapia</h3>
-                            <div class="pricing-duration">50 minut</div>
-                        </div>
-                        <div class="pricing-price">
-                            <span class="price">200</span>
-                            <span class="currency">zł</span>
-                        </div>
-                        <ul class="pricing-features">
-                            <li><i class="fas fa-check"></i> Regularne sesje terapeutyczne</li>
-                            <li><i class="fas fa-check"></i> Praca nad zmianą i rozwojem</li>
-                            <li><i class="fas fa-check"></i> Bezpieczna przestrzeń do refleksji</li>
-                            <li><i class="fas fa-check"></i> Indywidualne podejście</li>
-                        </ul>
-                        <a href="#kontakt" class="btn">Umów się</a>
-                    </div>
-                    <div class="pricing-card">
-                        <div class="pricing-header">
-                            <h3>Konsultacje rodzicielskie</h3>
-                            <div class="pricing-duration">50 minut</div>
-                        </div>
-                        <div class="pricing-price">
-                            <span class="price">200</span>
-                            <span class="currency">zł</span>
-                        </div>
-                        <ul class="pricing-features">
-                            <li><i class="fas fa-check"></i> Wsparcie w wychowaniu</li>
-                            <li><i class="fas fa-check"></i> Omówienie trudności z dzieckiem</li>
-                            <li><i class="fas fa-check"></i> Strategie reagowania</li>
-                        </ul>
-                        <a href="#kontakt" class="btn btn-outline">Umów się</a>
+                        <div class="pricing-duration">sesja / 50 minut</div>
+                        <p class="pricing-description">Cena dotyczy wszystkich usług: konsultacji psychologicznej, psychoterapii oraz konsultacji rodzicielskich.</p>
+                        <a href="#kontakt" class="btn">Umów wizytę</a>
                     </div>
                 </div>
-                <p class="pricing-note"><i class="fas fa-info-circle"></i> Płatność gotówką lub przelewem. Istnieje możliwość uzyskania faktury.</p>
+                <p class="pricing-note"><i class="fas fa-info-circle"></i> Płatność BLIK lub przelewem.</p>
             </div>
         </section>
 
@@ -239,16 +198,7 @@
                         <div class="faq-answer">
                             <p>Standardowo sesje odbywają się raz bądź dwa w tygodniu, o stałej porze. Regularność spotkań jest ważna dla efektywności terapii, ponieważ pozwala budować ciągłość procesu i bezpieczną relację terapeutyczną. W szczególnych sytuacjach częstotliwość może być dostosowana do Twoich potrzeb.</p>
                         </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Czy mogę odwołać wizytę?</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Tak, wizytę można odwołać najpóźniej 24 godziny przed planowanym terminem. W przypadku późniejszego odwołania lub niestawienia się na sesji, pobierana jest pełna opłata za wizytę. To zasada, która pozwala mi efektywnie planować czas i być dostępną dla wszystkich pacjentów.</p>
-                        </div>
-                    </div>
+                    </div>                   
                     <div class="faq-item">
                         <button class="faq-question">
                             <span>Czym różni się konsultacja od psychoterapii?</span>
@@ -295,6 +245,25 @@
         <section id="kontakt" class="section section-alt">
             <div class="container">
                 <h2 class="section-title">Kontakt</h2>
+                
+                <!-- Formularz kontaktowy -->
+                <div class="contact-form-container">
+                    <h3>Napisz do mnie</h3>
+                    <form id="contact-form" class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required placeholder="twoj@email.pl">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Wiadomość</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="W czym mogę pomóc?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-submit">
+                            <i class="fas fa-paper-plane"></i> Wyślij wiadomość
+                        </button>
+                    </form>
+                </div>
+                
                 <div class="contact-grid">
                     <div class="contact-info">
                         <h3>Gabinet Moment</h3>
@@ -310,48 +279,10 @@
                                 <span>TwójPsycholog.pl</span>
                             </a>
                         </div>
-                        
-                        <div class="social-icons">
-                            <a href="#" target="_blank" rel="noopener" 
-                               class="social-icon google" title="Google Business">
-                                <i class="fab fa-google"></i>
-                            </a>
-                        </div>
-                        
-                        <!-- Formularz kontaktowy -->
-                        <div class="contact-form-container">
-                            <h3>Napisz do mnie</h3>
-                            <form id="contact-form" class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
-                                <div class="form-group">
-                                    <label for="name">Imię i nazwisko</label>
-                                    <input type="text" id="name" name="name" required placeholder="Twoje imię">
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label for="email">E-mail</label>
-                                        <input type="email" id="email" name="email" required placeholder="twoj@email.pl">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="phone">Telefon</label>
-                                        <input type="tel" id="phone" name="phone" placeholder="+48 000 000 000">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="message">Wiadomość</label>
-                                    <textarea id="message" name="message" rows="5" required placeholder="W czym mogę pomóc?"></textarea>
-                                </div>
-                                <div class="form-group form-checkbox">
-                                    <input type="checkbox" id="privacy" name="privacy" required>
-                                    <label for="privacy">Akceptuję <a href="#" onclick="alert('Polityka prywatności'); return false;">politykę prywatności</a> i wyrażam zgodę na przetwarzanie moich danych osobowych.</label>
-                                </div>
-                                <button type="submit" class="btn btn-submit">
-                                    <i class="fas fa-paper-plane"></i> Wyślij wiadomość
-                                </button>
-                            </form>
-                        </div>
                     </div>
+                    
                     <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2326.8706713521115!2d18.600248377127098!3d54.32391770113175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd73f848491423%3A0x7b4911649de58ef7!2zxYHDs2R6a2EgNjQsIDgwLTE4MCBHZGHFhHNr!5e0!3m2!1spl!2spl!4v1772378178596!5m2!1spl!2spl"
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d18616.151541051055!2d18.604705490841983!3d54.32129648541434!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd73f848491423%3A0x7b4911649de58ef7!2zxYHDs2R6a2EgNjQsIDgwLTE4MCBHZGHFhHNr!5e0!3m2!1spl!2spl!4v1772389219430!5m2!1spl!2spl"
                                 title="Mapa lokalizacji Gabinetu Moment"
                                 allowfullscreen=""
                                 loading="lazy">
@@ -381,6 +312,63 @@
             <div class="cookie-buttons">
                 <button id="cookie-accept" class="cookie-btn accept">Akceptuję</button>
                 <button id="cookie-decline" class="cookie-btn decline">Odrzuć</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacy-modal" class="privacy-modal">
+        <div class="privacy-modal-content">
+            <span class="privacy-close" onclick="closePrivacyPolicy()">&times;</span>
+            <h2>Polityka Prywatności</h2>
+            <div class="privacy-text">
+                <h3>1. Administrator danych osobowych</h3>
+                <p>Administratorem Twoich danych osobowych jest Anna Mordawska, prowadząca działalność pod nazwą Gabinet Moment, z siedzibą w Gdańsku przy ul. Łódzkiej 64/43.</p>
+                
+                <h3>2. Kontakt z administratorem</h3>
+                <p>W sprawach związanych z ochroną danych osobowych możesz skontaktować się pod adresem e-mail: <a href="mailto:anmordawska@gmail.com">anmordawska@gmail.com</a> lub telefonicznie: +48 505 673 871.</p>
+                
+                <h3>3. Cel przetwarzania danych</h3>
+                <p>Twoje dane osobowe przetwarzane są w celu:</p>
+                <ul>
+                    <li>odpowiedzi na Twoje zapytanie przesłane przez formularz kontaktowy,</li>
+                    <li>umówienia i realizacji wizyty w gabinecie,</li>
+                    <li>prowadzenia dokumentacji psychoterapeutycznej (w przypadku rozpoczęcia terapii).</li>
+                </ul>
+                
+                <h3>4. Podstawa prawna przetwarzania</h3>
+                <p>Dane przetwarzane są na podstawie:</p>
+                <ul>
+                    <li>art. 6 ust. 1 lit. a RODO – Twoja zgoda,</li>
+                    <li>art. 6 ust. 1 lit. b RODO – niezbędność do wykonania umowy lub podjęcia działań przed jej zawarciem,</li>
+                    <li>art. 9 ust. 2 lit. h RODO – w przypadku danych dotyczących zdrowia, przetwarzanych w celach zdrowotnych.</li>
+                </ul>
+                
+                <h3>5. Okres przechowywania danych</h3>
+                <p>Dane z formularza kontaktowego przechowywane są do czasu zakończenia korespondencji. Dokumentacja psychoterapeutyczna przechowywana jest zgodnie z obowiązującymi przepisami prawa przez okres 20 lat od ostatniej wizyty.</p>
+                
+                <h3>6. Twoje prawa</h3>
+                <p>Masz prawo do:</p>
+                <ul>
+                    <li>dostępu do swoich danych,</li>
+                    <li>sprostowania danych,</li>
+                    <li>usunięcia danych (w zakresie dozwolonym prawem),</li>
+                    <li>ograniczenia przetwarzania,</li>
+                    <li>przenoszenia danych,</li>
+                    <li>cofnięcia zgody w dowolnym momencie,</li>
+                    <li>wniesienia skargi do Prezesa UODO.</li>
+                </ul>
+                
+                <h3>7. Odbiorcy danych</h3>
+                <p>Twoje dane nie są udostępniane podmiotom trzecim, z wyjątkiem przypadków wymaganych prawem. Formularz kontaktowy obsługiwany jest przez serwis Formspree.</p>
+                
+                <h3>8. Pliki cookies</h3>
+                <p>Strona wykorzystuje pliki cookies wyłącznie w celu zapamiętania Twojej decyzji dotyczącej cookies oraz poprawnego działania strony. Nie stosujemy cookies śledzących ani reklamowych.</p>
+                
+                <h3>9. Bezpieczeństwo danych</h3>
+                <p>Stosujemy odpowiednie środki techniczne i organizacyjne, aby chronić Twoje dane przed nieuprawnionym dostępem, utratą lub zniszczeniem.</p>
+                
+                <p class="privacy-date"><em>Ostatnia aktualizacja: marzec 2026</em></p>
             </div>
         </div>
     </div>
@@ -523,6 +511,31 @@
                 this.reset();
             });
         }
+
+        // Privacy Policy Modal
+        function openPrivacyPolicy() {
+            document.getElementById('privacy-modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePrivacyPolicy() {
+            document.getElementById('privacy-modal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Zamknij modal klikając poza zawartością lub klawiszem Escape
+        document.getElementById('privacy-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'privacy-modal') closePrivacyPolicy();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const privacyModal = document.getElementById('privacy-modal');
+                if (privacyModal.classList.contains('active')) {
+                    closePrivacyPolicy();
+                }
+            }
+        });
     </script>
 </body>
 </html>

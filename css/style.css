@@ -30,6 +30,7 @@ body {
     line-height: 1.6;
     color: var(--text);
     background: var(--bg);
+    overflow-x: hidden;
 }
 
 img {
@@ -589,7 +590,7 @@ img {
    ============================================ */
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
     align-items: start;
 }
@@ -754,6 +755,114 @@ img {
 }
 
 /* ============================================
+   PRIVACY POLICY MODAL
+   ============================================ */
+.privacy-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.privacy-modal.active {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.privacy-modal-content {
+    background: white;
+    max-width: 800px;
+    width: 100%;
+    border-radius: var(--radius);
+    padding: 40px;
+    position: relative;
+    margin: 40px auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.privacy-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: var(--transition);
+    line-height: 1;
+}
+
+.privacy-close:hover {
+    color: var(--primary);
+}
+
+.privacy-modal-content h2 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--secondary);
+}
+
+.privacy-text h3 {
+    color: var(--primary-dark);
+    font-size: 1.1rem;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.privacy-text p {
+    color: var(--text);
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.privacy-text ul {
+    margin: 10px 0 15px 20px;
+    color: var(--text);
+}
+
+.privacy-text ul li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.privacy-text a {
+    color: var(--primary);
+}
+
+.privacy-date {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .privacy-modal-content {
+        padding: 25px 20px;
+        margin: 20px auto;
+    }
+    
+    .privacy-modal-content h2 {
+        font-size: 1.5rem;
+        padding-right: 30px;
+    }
+    
+    .privacy-text h3 {
+        font-size: 1rem;
+    }
+}
+
+/* ============================================
    FOOTER
    ============================================ */
 .footer {
@@ -769,9 +878,16 @@ img {
 @media (max-width: 992px) {
     .pricing-grid {
         grid-template-columns: 1fr;
-        max-width: 400px;
+        max-width: 450px;
         margin-left: auto;
         margin-right: auto;
+        gap: 20px;
+    }
+
+    .pricing-card {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .pricing-card.featured {
@@ -920,6 +1036,12 @@ img {
 
     .pricing-grid {
         grid-template-columns: 1fr;
+        max-width: 100%;
+        padding: 0 5px;
+    }
+
+    .pricing-card {
+        padding: 25px 15px;
     }
 
     .pricing-card.featured {
@@ -932,6 +1054,8 @@ img {
 
     .contact-form-container {
         margin-top: 30px;
+        max-width: 100%;
+        padding: 25px 20px;
     }
 
     .form-row {
@@ -941,13 +1065,82 @@ img {
 }
 
 /* ============================================
-   PRICING SECTION
+   PRICING SECTION - SIMPLE
+   ============================================ */
+.pricing-simple {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.pricing-main {
+    background: white;
+    border-radius: var(--radius);
+    padding: 50px 60px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    max-width: 500px;
+    width: 100%;
+}
+
+.pricing-price-big {
+    margin-bottom: 10px;
+}
+
+.pricing-price-big .price {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1;
+}
+
+.pricing-price-big .currency {
+    font-size: 2rem;
+    color: var(--primary);
+    vertical-align: super;
+}
+
+.pricing-main .pricing-duration {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.pricing-description {
+    color: var(--text-light);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.pricing-main .btn {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 480px) {
+    .pricing-main {
+        padding: 35px 25px;
+    }
+    
+    .pricing-price-big .price {
+        font-size: 3rem;
+    }
+    
+    .pricing-price-big .currency {
+        font-size: 1.5rem;
+    }
+}
+
+/* ============================================
+   PRICING SECTION - GRID (legacy)
    ============================================ */
 .pricing-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-top: 40px;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .pricing-card {
@@ -1143,9 +1336,12 @@ img {
    CONTACT FORM
    ============================================ */
 .contact-form-container {
-    margin-top: 40px;
-    padding-top: 30px;
-    border-top: 1px solid #ddd;
+    margin: 0 auto 40px;
+    padding: 30px;
+    background: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    max-width: 600px;
 }
 
 .contact-form-container h3 {
