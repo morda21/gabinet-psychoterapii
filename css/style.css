@@ -972,6 +972,11 @@ img {
         grid-template-columns: 1fr;
     }
 
+    .contact-booking-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
     .map-container iframe {
         height: 300px;
     }
@@ -1055,9 +1060,18 @@ img {
         padding: 25px 20px;
     }
 
+    .contact-booking-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact-booking-grid .contact-form-container {
+        margin-top: 0;
+    }
+
     .form-row {
         flex-direction: column;
-        gap: 0;
+        max-width: 100%;
     }
 }
 
@@ -1344,6 +1358,48 @@ img {
 .contact-form-container h3 {
     color: var(--primary);
     margin-bottom: 20px;
+}
+
+.contact-booking-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+    margin: 0 auto 40px;
+}
+
+.contact-booking-grid .contact-form-container {
+    margin: 0;
+    max-width: 100%;
+}
+
+.booking-widget-container {
+    max-width: 100%;
+}
+
+#twoj-psycholog-widget {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+#twoj-psycholog-widget iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .contact-booking-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-booking-grid .contact-form-container {
+        margin-top: 0;
+    }
 }
 
 .contact-form {

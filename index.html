@@ -159,7 +159,7 @@
                         </div>
                         <div class="pricing-duration">sesja / 50 minut</div>
                         <p class="pricing-description">Cena dotyczy wszystkich usług: konsultacji psychologicznej, psychoterapii oraz konsultacji rodzicielskich.</p>
-                        <a href="https://twojpsycholog.pl/profil-psychologa/anna-mordawska-4816" class="btn" target="_blank" rel="noopener">Umów wizytę</a>
+                        <a href="#kontakt" class="btn">Umów wizytę</a>
                     </div>
                 </div>
                 <p class="pricing-note"><i class="fas fa-info-circle"></i> Płatność BLIK lub przelewem.</p>
@@ -253,28 +253,40 @@
         <section id="kontakt" class="section section-alt">
             <div class="container">
                 <h2 class="section-title">Kontakt</h2>
-                
-                <!-- Formularz kontaktowy -->
-                <div class="contact-form-container">
-                    <h3>Napisz do mnie</h3>
-                    <form id="contact-form" class="contact-form" action="send.php" method="POST">
-                        <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" name="email" required placeholder="twoj@email.pl">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Wiadomość</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="W czym mogę pomóc?"></textarea>
-                        </div>
-                        <!-- Honeypot - pole antyspamowe (ukryte) -->
-                        <div style="position: absolute; left: -9999px;" aria-hidden="true">
-                            <input type="text" name="website" tabindex="-1" autocomplete="off">
-                        </div>
-                        <button type="submit" class="btn btn-submit">
-                            <i class="fas fa-paper-plane"></i> Wyślij wiadomość
-                        </button>
-                        <div id="form-message" class="form-message" style="display: none;"></div>
-                    </form>
+                <div class="contact-booking-grid">
+                    <div class="contact-form-container booking-widget-container">
+                        <h3>Umów wizytę online</h3>
+                        <div id="twoj-psycholog-widget"
+                             data-twoj-psycholog-therapist-id="4816"
+                             data-twoj-psycholog-variant="full"
+                             data-twoj-psycholog-return-url="https://annamordawska.pl/"
+                             data-twoj-psycholog-top-background="#4a6741"
+                             data-twoj-psycholog-button-background="#4a6741"
+                        ></div>
+                    </div>
+
+                    <!-- Formularz kontaktowy -->
+                    <div class="contact-form-container">
+                        <h3>Napisz do mnie</h3>
+                        <form id="contact-form" class="contact-form" action="send.php" method="POST">
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" required placeholder="twoj@email.pl">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Wiadomość</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="W czym mogę pomóc?"></textarea>
+                            </div>
+                            <!-- Honeypot - pole antyspamowe (ukryte) -->
+                            <div style="position: absolute; left: -9999px;" aria-hidden="true">
+                                <input type="text" name="website" tabindex="-1" autocomplete="off">
+                            </div>
+                            <button type="submit" class="btn btn-submit">
+                                <i class="fas fa-paper-plane"></i> Wyślij wiadomość
+                            </button>
+                            <div id="form-message" class="form-message" style="display: none;"></div>
+                        </form>
+                    </div>
                 </div>
                 
                 <div class="contact-grid">
@@ -580,5 +592,6 @@
             }
         });
     </script>
+    <script src="https://twojpsycholog.pl/static/widget/static/js/twoj-psycholog-widget.js"></script>
 </body>
 </html>
