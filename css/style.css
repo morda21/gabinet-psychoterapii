@@ -237,8 +237,7 @@ img {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.1)), 
-                url('../images/pinetrees.png') center/cover no-repeat;
+        background: linear-gradient(135deg, rgba(244, 240, 230, 0.95), rgba(232, 238, 228, 0.92));
     color: var(--text);
     padding-top: 70px;
 }
@@ -935,9 +934,6 @@ img {
 
     .hero p {
         text-shadow: 0 0 15px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,0.9);
-        background: rgba(255,255,255,0.3);
-        padding: 8px 15px;
-        border-radius: 8px;
     }
 
     .about-grid {
@@ -1005,9 +1001,6 @@ img {
 
     .hero p {
         font-size: 0.95rem;
-        background: rgba(255,255,255,0.5);
-        padding: 10px 15px;
-        border-radius: 8px;
         margin-left: 10px;
         margin-right: 10px;
     }
