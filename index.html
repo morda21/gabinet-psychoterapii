@@ -278,13 +278,13 @@
                                 <textarea id="message" name="message" rows="5" required placeholder="W czym mogę pomóc?"></textarea>
                             </div>
                             <!-- Honeypot - pole antyspamowe (ukryte) -->
-                            <div style="position: absolute; left: -9999px;" aria-hidden="true">
+                            <div class="honeypot-field" aria-hidden="true">
                                 <input type="text" name="website" tabindex="-1" autocomplete="off">
                             </div>
                             <button type="submit" class="btn btn-submit">
                                 <i class="fas fa-paper-plane"></i> Wyślij wiadomość
                             </button>
-                            <div id="form-message" class="form-message" style="display: none;"></div>
+                            <div id="form-message" class="form-message is-hidden"></div>
                         </form>
                     </div>
                 </div>

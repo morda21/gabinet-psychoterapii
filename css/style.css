@@ -1489,6 +1489,16 @@ img {
     font-size: 0.9rem;
 }
 
+/* Contact form helpers */
+.honeypot-field {
+    position: absolute;
+    left: -9999px;
+}
+
+.is-hidden {
+    display: none !important;
+}
+
 /* Form Messages */
 .form-message {
     padding: 15px 20px;
